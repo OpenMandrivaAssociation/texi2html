@@ -13,7 +13,6 @@ Requires(preun): info-install
 Obsoletes:      tetex-texi2html
 Provides:       tetex-texi2html
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 The basic purpose of texi2html is to convert Texinfo documents into HTML, 
