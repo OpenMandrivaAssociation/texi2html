@@ -1,6 +1,6 @@
 Name:           texi2html
 Version:        1.78
-Release:        %mkrel 1
+Release:        %mkrel 2
 Epoch:          0
 License:        GPL
 Group:          Publishing
@@ -10,8 +10,8 @@ Source0:        http://download.savannah.nongnu.org/releases/texi2html/texi2html
 Source1:        http://download.savannah.nongnu.org/releases/texi2html/texi2html-%{version}.tar.bz2.sig
 Requires(post): info-install
 Requires(preun): info-install
-Obsoletes:      tetex-texi2html
-Provides:       tetex-texi2html
+Obsoletes:      tetex-texi2html < 3.0-50
+Provides:       tetex-texi2html = 3.0-50
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
