@@ -1,10 +1,10 @@
 
 # (anssi) Only should be changed at the same time as texlive+texlive-texmf:
-%define obsolete_tetex 1
+%define obsolete_tetex 0
 
 Name:           texi2html
 Version:        1.78
-Release:        %mkrel 2
+Release:        %mkrel 3
 Epoch:          0
 License:        GPL
 Group:          Publishing
@@ -15,11 +15,11 @@ Source1:        http://download.savannah.nongnu.org/releases/texi2html/texi2html
 Requires(post): info-install
 Requires(preun): info-install
 %if %obsolete_tetex
-Obsoletes:      tetex-texi2html < 3.0-50
+Obsoletes:      tetex-texi2html < 1:3.0
+Provides:       tetex-texi2html = 1:3.0
 %else
-Conflicts:      tetex-texi2html < 3.0-50
+Conflicts:      tetex-texi2html < 1:3.0
 %endif
-Provides:       tetex-texi2html = 3.0-50
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
