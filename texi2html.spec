@@ -4,7 +4,7 @@
 
 Name:           texi2html
 Version:        1.78
-Release:        %mkrel 3
+Release:        %mkrel 4
 Epoch:          0
 License:        GPL
 Group:          Publishing
@@ -16,10 +16,10 @@ Requires(post): info-install
 Requires(preun): info-install
 %if %obsolete_tetex
 Obsoletes:      tetex-texi2html < 1:3.0
-Provides:       tetex-texi2html = 1:3.0
 %else
 Conflicts:      tetex-texi2html < 1:3.0
 %endif
+Provides:	tetex-texi2html = 1:3.0
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
