@@ -4,7 +4,7 @@
 
 Name:           texi2html
 Version:        1.78
-Release:        %mkrel 6
+Release:        %mkrel 7
 Epoch:          0
 License:        GPL
 Group:          Publishing
