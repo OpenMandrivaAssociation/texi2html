@@ -3,15 +3,14 @@
 %define obsolete_tetex 0
 
 Name:           texi2html
-Version:        1.78
-Release:        %mkrel 7
+Version:        1.82
+Release:        %mkrel 1
 Epoch:          0
 License:        GPL
 Group:          Publishing
 Summary:        Highly customizable texinfo to HTML and other formats translator
 URL:            http://www.nongnu.org/texi2html/
 Source0:        http://download.savannah.nongnu.org/releases/texi2html/texi2html-%{version}.tar.bz2
-Source1:        http://download.savannah.nongnu.org/releases/texi2html/texi2html-%{version}.tar.bz2.sig
 Requires(post): info-install
 Requires(preun): info-install
 %if %obsolete_tetex
@@ -24,10 +23,10 @@ BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
-The basic purpose of texi2html is to convert Texinfo documents into HTML, 
-and other formats. Configuration files written in perl provide fine degree 
-of control over the final output, allowing most every aspect of the final 
-output not specified in the Texinfo input file to be specified.  
+The basic purpose of texi2html is to convert Texinfo documents into HTML,
+and other formats. Configuration files written in perl provide fine degree
+of control over the final output, allowing most every aspect of the final
+output not specified in the Texinfo input file to be specified.
 
 %prep
 %setup -q
