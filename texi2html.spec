@@ -4,7 +4,7 @@
 
 Name:           texi2html
 Version:        1.82
-Release:        %mkrel 1
+Release:        %mkrel 2
 Epoch:          0
 License:        GPL
 Group:          Publishing
