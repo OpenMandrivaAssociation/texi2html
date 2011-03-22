@@ -1,10 +1,6 @@
-
-# (anssi) Only should be changed at the same time as texlive+texlive-texmf:
-%define obsolete_tetex 0
-
 Name:           texi2html
 Version:        1.82
-Release:        %mkrel 2
+Release:        %mkrel 3
 Epoch:          0
 License:        GPL
 Group:          Publishing
@@ -13,14 +9,14 @@ URL:            http://www.nongnu.org/texi2html/
 Source0:        http://download.savannah.nongnu.org/releases/texi2html/texi2html-%{version}.tar.bz2
 Requires(post): info-install
 Requires(preun): info-install
-%if %obsolete_tetex
-Obsoletes:      tetex-texi2html < 1:3.0
-%else
-Conflicts:      tetex-texi2html < 1:3.0
-%endif
+%if %mdkversion <= 201100
 Provides:	tetex-texi2html = 1:3.0
+%endif
+%if %mdkversion >= 201100
+Obsoletes:      tetex-texi2html < 1:3.0
+%endif
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The basic purpose of texi2html is to convert Texinfo documents into HTML,
