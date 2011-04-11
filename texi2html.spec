@@ -1,6 +1,6 @@
 Name:           texi2html
 Version:        1.82
-Release:        %mkrel 3
+Release:        %mkrel 4
 Epoch:          0
 License:        GPL
 Group:          Publishing
@@ -9,11 +9,8 @@ URL:            http://www.nongnu.org/texi2html/
 Source0:        http://download.savannah.nongnu.org/releases/texi2html/texi2html-%{version}.tar.bz2
 Requires(post): info-install
 Requires(preun): info-install
-%if %mdkversion <= 201100
-Provides:	tetex-texi2html = 1:3.0
-%endif
 %if %mdkversion >= 201100
-Obsoletes:      tetex-texi2html < 1:3.0
+Obsoletes:	tetex-texi2html <= 1.78
 %endif
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
