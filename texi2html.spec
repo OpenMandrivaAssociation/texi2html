@@ -1,6 +1,6 @@
 Name:           texi2html
 Version:        1.82
-Release:        %mkrel 4
+Release:        5
 Epoch:          0
 License:        GPL
 Group:          Publishing
@@ -13,7 +13,6 @@ Requires(preun): info-install
 Obsoletes:	tetex-texi2html <= 1.78
 %endif
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The basic purpose of texi2html is to convert Texinfo documents into HTML,
@@ -25,15 +24,11 @@ output not specified in the Texinfo input file to be specified.
 %setup -q
 
 %build
-%{configure2_5x} --build=%{_arch}-mandriva-linux-gnu
-%{make}
+%configure2_5x --build=%{_arch}-mandriva-linux-gnu
+%make
 
 %install
-%{__rm} -rf %{buildroot}
-%{makeinstall}
-
-%clean
-%{__rm} -rf %{buildroot}
+%makeinstall
 
 %post
 %_install_info texi2html.info
