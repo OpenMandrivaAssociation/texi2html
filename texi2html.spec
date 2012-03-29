@@ -2,7 +2,7 @@ Name:           texi2html
 Version:        1.82
 Release:        5
 Epoch:          0
-License:        GPL
+License:        GPLv2+
 Group:          Publishing
 Summary:        Highly customizable texinfo to HTML and other formats translator
 URL:            http://www.nongnu.org/texi2html/
