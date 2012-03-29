@@ -7,8 +7,6 @@ Group:          Publishing
 Summary:        Highly customizable texinfo to HTML and other formats translator
 URL:            http://www.nongnu.org/texi2html/
 Source0:        http://download.savannah.nongnu.org/releases/texi2html/texi2html-%{version}.tar.bz2
-Requires(post): info-install
-Requires(preun): info-install
 %if %mdkversion >= 201100
 Obsoletes:	tetex-texi2html <= 1.78
 %endif
@@ -29,12 +27,6 @@ output not specified in the Texinfo input file to be specified.
 
 %install
 %makeinstall
-
-%post
-%_install_info texi2html.info
-
-%preun
-%_remove_install_info texi2html.info
 
 %files
 %defattr(0644,root,root,0755)
