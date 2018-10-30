@@ -1,6 +1,6 @@
 Name:           texi2html
 Version:        1.82
-Release:        16
+Release:        17
 Epoch:          0
 License:        GPL
 Group:          Publishing
