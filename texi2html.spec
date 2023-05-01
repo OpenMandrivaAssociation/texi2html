@@ -18,6 +18,7 @@ Patch0:		texi2html-5.0-Do-not-install-Unicode-EastAsianWidth-if-external-is-used
 # (upstream) <https://savannah.nongnu.org/bugs/?43457>
 Patch1:		texi2html-5.0-Do-not-install-libintl-perl-if-external-is-used.patch
 Patch2:		texi2html-5.0-gettext.patch
+BuildRequires:	gettext-devel
 BuildRequires:	perl(Data::Dumper)
 BuildRequires:	perl(Locale::Messages)
 BuildRequires:	perl(Text::Unidecode)
